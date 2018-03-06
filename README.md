@@ -35,13 +35,13 @@ will need to register the service provider in `config/app.php`. Make sure to
 add the following line **above** the `RouteServiceProvider`.
 
 ```PHP
-Jrean\SuperCollege\SuperCollegeServiceProvider::class,
+Jrean\SuperCollegeBrowse\SuperCollegeBrowseServiceProvider::class,
 ```
 
 You may add the following `aliases` to your `config/app.php`:
 
 ```PHP
-'SuperCollege' => Jrean\SuperCollege\Facades\SuperCollege::class,
+'SuperCollege' => Jrean\SuperCollegeBrowse\Facades\SuperCollegeBrowse::class,
 ```
 
 The last 2 directives are optional if you are using Laravel ~5.5, thanks to the
@@ -50,7 +50,7 @@ auto-discovery option.
 Publish the package config file by running the following command:
 
 ```
-php artisan vendor:publish --provider="Jrean\SuperCollege\SuperCollegeServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Jrean\SuperCollegeBrowse\SuperCollegeBrowseServiceProvider" --tag="config"
 ```
 
 ## LICENSE
