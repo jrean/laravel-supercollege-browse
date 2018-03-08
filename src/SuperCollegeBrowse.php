@@ -183,7 +183,7 @@ class SuperCollegeBrowse
         try {
             $response = call_user_func_array(array($this->client, "getawards"), array_flatten($params));
 
-            return collect($response->award->details);
+            return empty($response->award) ? collect() : collect($response->award->details);
         } catch (Exception $e) {
             // @TODO Implement better exception handling.
             throw new Exception($e->getMessage() . ' - SoapClient error on getawards method');
